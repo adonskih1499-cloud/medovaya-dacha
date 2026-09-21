@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Медовая дача · Эко-отдых на пасеке в экопарке «Поляны»</title>
+  <meta name="description" content="Медовая дача в экопарке «Поляны» — уникальный эко-домик, где сон над ульями пчёл и их гудение дарят телу вибрационное исцеление. Индивидуальные чаепития, мастер-классы по свечам из пчелиного воска, экскурсии по пасеке." />
+  <meta name="keywords" content="Медовая дача, Экопарк Поляны, апитерапия, сон на пасеке, пчелиный мёд, эко-отдых, чаепитие, свечи из воска, экскурсия на пасеку, виброакустическая терапия, пчеловодство" />
+  <meta property="og:title" content="Медовая дача · Эко-отдых на пасеке в экопарке «Поляны»" />
+  <meta property="og:description" content="Уютный эко-домик в экопарке «Поляны», где пчёлы под спальными местами создают целительные вибрации. Чаепития, мастер-классы, экскурсии." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Marck+Script&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <!-- Compiled Tailwind CSS (production build, no CDN warning) -->
+  <link rel="stylesheet" href="tailwind.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-cream text-bark font-sans antialiased">
+
+  <!-- ============== NAVBAR ============== -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 sm:h-20 items-center justify-between">
+        <!-- Brand -->
+        <a href="#top" id="brand-link" class="flex items-center gap-3 transition-transform hover:scale-[1.02]">
+          <img src="images/logo.png" alt="Логотип «Медовая дача»" class="w-11 h-11 object-contain" />
+          <span class="flex flex-col items-center leading-none">
+            <span id="brand-title" class="font-script text-3xl sm:text-4xl transition-colors">Медовая дача</span>
+            <span id="brand-tagline" class="font-display italic text-[11px] sm:text-xs tracking-[0.15em] mt-1 transition-colors">в Экопарке Поляны</span>
+          </span>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden lg:flex items-center gap-1">
+          <a href="#concept" class="nav-link px-3.5 py-2 text-sm font-medium transition-colors">Концепция</a>
+          <a href="#sleeping" class="nav-link px-3.5 py-2 text-sm font-medium transition-colors">Сон на пасеке</a>
+          <a href="#services" class="nav-link px-3.5 py-2 text-sm font-medium transition-colors">Услуги</a>
+          <a href="#gallery" class="nav-link px-3.5 py-2 text-sm font-medium transition-colors">Галерея</a>
+          <a href="#contact" class="nav-link px-3.5 py-2 text-sm font-medium transition-colors">Контакты</a>
+        </nav>
+
+        <a href="#contact" class="hidden lg:inline-flex items-center justify-center bg-honey hover:bg-honey-dark text-white rounded-full px-5 h-9 text-sm font-medium shadow-md shadow-honey/30 transition-colors">Забронировать</a>
+
+        <!-- Mobile menu button -->
+        <button id="menu-btn" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-full transition-colors" aria-label="Меню">
+          <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg id="menu-icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="lg:hidden overflow-hidden max-h-0 transition-all duration-300 bg-cream/95 backdrop-blur-md border-b border-honey/15">
+      <nav class="px-4 sm:px-6 py-4 flex flex-col gap-1">
+        <a href="#concept" class="mobile-link px-4 py-3 text-base font-medium text-bark/80 hover:text-honey-dark hover:bg-honey/10 rounded-xl transition-colors">Концепция</a>
+        <a href="#sleeping" class="mobile-link px-4 py-3 text-base font-medium text-bark/80 hover:text-honey-dark hover:bg-honey/10 rounded-xl transition-colors">Сон на пасеке</a>
+        <a href="#services" class="mobile-link px-4 py-3 text-base font-medium text-bark/80 hover:text-honey-dark hover:bg-honey/10 rounded-xl transition-colors">Услуги</a>
+        <a href="#gallery" class="mobile-link px-4 py-3 text-base font-medium text-bark/80 hover:text-honey-dark hover:bg-honey/10 rounded-xl transition-colors">Галерея</a>
+        <a href="#contact" class="mobile-link px-4 py-3 text-base font-medium text-bark/80 hover:text-honey-dark hover:bg-honey/10 rounded-xl transition-colors">Контакты</a>
+        <a href="#contact" class="mobile-link mt-3 inline-flex items-center justify-center bg-honey hover:bg-honey-dark text-white rounded-full h-11 text-base font-medium transition-colors">Забронировать отдых</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============== HERO ============== -->
+  <section id="top" class="relative min-h-screen w-full overflow-hidden flex items-center pt-20 sm:pt-24">
+    <div class="absolute inset-0">
+      <img src="images/cabin-outside.jpg" alt="Домик «Медовой дачи» среди природы" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-t from-bark/85 via-bark/40 to-bark/20"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-honey-dark/30 via-transparent to-transparent"></div>
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse at center, transparent 30%, rgba(50,30,10,0.45) 100%);"></div>
+    </div>
+
+    <!-- Falling drops -->
+    <div class="pointer-events-none absolute inset-0 overflow-hidden" id="drops"></div>
+
+    <div class="relative z-10 w-full">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cream/15 backdrop-blur-md border border-cream/25 text-cream text-xs sm:text-sm tracking-wide mb-6 reveal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-light"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Эко-отдых · Апитерапия · Виброакустический сон
+          </div>
+
+          <div class="font-script text-cream leading-[1.05] drop-shadow-xl reveal" style="font-size: clamp(3rem, 9vw, 7rem);">
+            Дом, где пчёлы
+            <span class="block text-honey-light">лечат</span>
+          </div>
+
+          <div class="font-display italic text-cream/80 text-base sm:text-lg tracking-[0.2em] mt-3 ml-1 reveal">
+            сон на пасеке · почасово · от 1 часа
+          </div>
+
+          <div class="mt-6 h-px bg-gradient-to-r from-honey-light via-honey to-transparent max-w-md reveal"></div>
+
+          <p class="mt-6 text-lg sm:text-xl text-cream/90 leading-relaxed max-w-2xl reveal">
+            Уютный эко-домик, где гул пчелиной семьи под спальными местами
+            дарит телу целительные вибрации. Аренда почасовая — от 1 часа:
+            проведите столько времени, сколько нужно именно вам.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-3 reveal">
+            <a href="#contact" class="inline-flex items-center justify-center bg-honey hover:bg-honey-light hover:text-bark text-white rounded-full px-7 h-12 text-base shadow-lg shadow-honey/30 transition-colors">Забронировать отдых</a>
+            <a href="#concept" class="inline-flex items-center justify-center bg-cream/10 backdrop-blur-md border border-cream/40 text-cream hover:bg-cream/20 hover:text-cream rounded-full px-7 h-12 text-base transition-colors">Узнать о концепции</a>
+          </div>
+
+          <div class="mt-10 sm:mt-14 grid grid-cols-3 gap-4 sm:gap-8 max-w-lg reveal">
+            <div class="flex flex-col">
+              <span class="font-display text-3xl sm:text-4xl font-bold text-honey-light">12</span>
+              <span class="text-xs sm:text-sm text-cream/70 mt-1">ульев под домом</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-display text-3xl sm:text-4xl font-bold text-honey-light">40+</span>
+              <span class="text-xs sm:text-sm text-cream/70 mt-1">частот гудения</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-display text-3xl sm:text-4xl font-bold text-honey-light">от 1ч</span>
+              <span class="text-xs sm:text-sm text-cream/70 mt-1">почасовая аренда</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#concept" class="absolute bottom-5 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1 text-cream/70 hover:text-cream transition-colors reveal">
+      <span class="text-xs uppercase tracking-widest">Листайте</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="animate-bounce"><polyline points="6 9 12 15 18 9"/></svg>
+    </a>
+  </section>
+
+  <!-- ============== CONCEPT ============== -->
+  <section id="concept" class="relative py-20 sm:py-28 lg:py-32 bg-cream paper-texture">
+    <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle at 25% 25%, var(--tw-color-bark, oklch(0.32 0.04 50)) 2px, transparent 2px), radial-gradient(circle at 75% 75%, oklch(0.32 0.04 50) 2px, transparent 2px); background-size: 56px 56px;"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="flex items-center gap-3 reveal">
+          <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-honey-dark font-medium">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+            Концепция места
+          </span>
+          <span class="h-px flex-1 max-w-24 bg-gradient-to-r from-honey-dark/40 to-transparent"></span>
+        </div>
+
+        <div class="mt-4 font-script text-3xl sm:text-4xl text-honey-dark reveal">Там, где пчёлы — лекари</div>
+
+        <h2 class="mt-2 font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-bark leading-[1.05] reveal">
+          Дом, где пчёлы —
+          <span class="text-honey-dark italic"> ваши лекари</span>
+        </h2>
+
+        <div class="mt-5 inline-flex items-center gap-1.5 text-sm text-bark/60 reveal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          экопарк «Поляны»
+          <span class="mx-2 w-1 h-1 rounded-full bg-honey-dark/40"></span>
+          Ленинградская область
+        </div>
+
+        <p class="mt-6 text-lg text-bark/75 leading-relaxed reveal">
+          «Медовая дача» — это не просто домик для отдыха. Это пространство,
+          где человек оказывается в прямом контакте с пчелиной семьёй. Ульи
+          размещены под спальными местами, и сквозь тонкие деревянные
+          перекрытия проходят мягкие вибрации гудения пчёл — тот самый звук,
+          который столетиями считался голосом живой природы.
+        </p>
+
+        <p class="mt-4 text-lg text-bark/75 leading-relaxed reveal">
+          Спустя даже один сеанс на пасеке гости отмечают глубокое расслабление,
+          лёгкость в теле и редкое чувство внутренней тишины — будто организм
+          наконец-то услышал сам себя.
+        </p>
+      </div>
+
+      <div class="mt-14 sm:mt-20 grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+        <!-- Pillar 1 -->
+        <article class="lift-card group relative p-6 sm:p-8 rounded-2xl bg-white/70 backdrop-blur-sm border border-honey/15 hover:border-honey/40 hover:shadow-xl hover:shadow-honey/10 reveal">
+          <span class="absolute top-4 right-5 font-display text-5xl font-bold text-honey/10 select-none">01</span>
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-honey/15 flex items-center justify-center group-hover:bg-honey group-hover:rotate-6 transition-all duration-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark group-hover:text-white transition-colors"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 7v10M3 7l9 5 9-5"/></svg>
+              </div>
+            </div>
+            <div class="flex-1">
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-bark mb-2">Пчелиное гудение</h3>
+              <p class="text-bark/70 leading-relaxed text-[15px] sm:text-base">Под спальными местами расположены ульи. Ровный низкочастотный гул пчелиной семьи создаёт вибрации, которые мягко погружают в глубокий сон и запускают естественное восстановление организма.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pillar 2 -->
+        <article class="lift-card group relative p-6 sm:p-8 rounded-2xl bg-white/70 backdrop-blur-sm border border-honey/15 hover:border-honey/40 hover:shadow-xl hover:shadow-honey/10 reveal">
+          <span class="absolute top-4 right-5 font-display text-5xl font-bold text-honey/10 select-none">02</span>
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-honey/15 flex items-center justify-center group-hover:bg-honey group-hover:rotate-6 transition-all duration-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark group-hover:text-white transition-colors"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+            </div>
+            <div class="flex-1">
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-bark mb-2">Виброакустическая терапия</h3>
+              <p class="text-bark/70 leading-relaxed text-[15px] sm:text-base">Вибрации частотой 80–200 Гц, генерируемые пчёлами, улучшают кровообращение, снимают мышечное напряжение и снижают уровень стресса — научно подтверждённый эффект апитерапии.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pillar 3 -->
+        <article class="lift-card group relative p-6 sm:p-8 rounded-2xl bg-white/70 backdrop-blur-sm border border-honey/15 hover:border-honey/40 hover:shadow-xl hover:shadow-honey/10 reveal">
+          <span class="absolute top-4 right-5 font-display text-5xl font-bold text-honey/10 select-none">03</span>
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-honey/15 flex items-center justify-center group-hover:bg-honey group-hover:rotate-6 transition-all duration-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark group-hover:text-white transition-colors"><path d="M17 14V6a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v8m12 0H5m12 0v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-6"/></svg>
+              </div>
+            </div>
+            <div class="flex-1">
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-bark mb-2">Сила леса и тишины</h3>
+              <p class="text-bark/70 leading-relaxed text-[15px] sm:text-base">Домик стоит на опушке хвойного леса экопарка «Поляны» вдали от городского шума. Здесь вы дышите воздухом, напоённым фитонцидами и ароматом мёда, а просыпаетесь под пение птиц.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pillar 4 -->
+        <article class="lift-card group relative p-6 sm:p-8 rounded-2xl bg-white/70 backdrop-blur-sm border border-honey/15 hover:border-honey/40 hover:shadow-xl hover:shadow-honey/10 reveal">
+          <span class="absolute top-4 right-5 font-display text-5xl font-bold text-honey/10 select-none">04</span>
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-honey/15 flex items-center justify-center group-hover:bg-honey group-hover:rotate-6 transition-all duration-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark group-hover:text-white transition-colors"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg>
+              </div>
+            </div>
+            <div class="flex-1">
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-bark mb-2">Натуральный мёд и воск</h3>
+              <p class="text-bark/70 leading-relaxed text-[15px] sm:text-base">Свежий мёд прямо из сот, травяные чаи с пасеки и свечи из чистого пчелиного воска — всё, что окружает вас на Медовой даче, создано природой и нашими руками.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Stats ribbon -->
+      <div class="mt-14 sm:mt-16 rounded-3xl bg-gradient-to-r from-honey-dark via-honey to-honey-light p-[1.5px] shadow-xl shadow-honey/20 reveal">
+        <div class="relative rounded-3xl bg-cream px-6 sm:px-10 py-8 sm:py-10 overflow-hidden">
+          <svg class="absolute -top-4 -right-4 w-32 h-32 text-honey/10" viewBox="0 0 80 92" fill="none" stroke="currentColor" stroke-width="1"><path d="M40 0L80 23V69L40 92L0 69V23L40 0Z"/></svg>
+          <svg class="absolute -bottom-6 -left-6 w-24 h-24 text-honey/10" viewBox="0 0 80 92" fill="none" stroke="currentColor" stroke-width="1"><path d="M40 0L80 23V69L40 92L0 69V23L40 0Z"/></svg>
+          <div class="relative grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+            <div class="text-center">
+              <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-honey-dark">100%</div>
+              <div class="mt-1.5 text-xs sm:text-sm text-bark/65">натуральный мёд</div>
+            </div>
+            <div class="text-center">
+              <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-honey-dark">12</div>
+              <div class="mt-1.5 text-xs sm:text-sm text-bark/65">ульев под домом</div>
+            </div>
+            <div class="text-center">
+              <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-honey-dark">≈ 200 Гц</div>
+              <div class="mt-1.5 text-xs sm:text-sm text-bark/65">частота гудения</div>
+            </div>
+            <div class="text-center">
+              <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-honey-dark">от 1ч</div>
+              <div class="mt-1.5 text-xs sm:text-sm text-bark/65">почасовая аренда</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SLEEPING ============== -->
+  <section id="sleeping" class="relative py-20 sm:py-28 lg:py-32 bg-gradient-to-b from-cream via-beeswax/40 to-cream overflow-hidden">
+    <svg aria-hidden="true" class="absolute top-1/4 -left-12 w-48 h-48 text-honey/8" viewBox="0 0 80 92" fill="none" stroke="currentColor" stroke-width="1"><path d="M40 0L80 23V69L40 92L0 69V23L40 0Z"/></svg>
+    <svg aria-hidden="true" class="absolute bottom-1/4 -right-12 w-64 h-64 text-honey/8" viewBox="0 0 80 92" fill="none" stroke="currentColor" stroke-width="1"><path d="M40 0L80 23V69L40 92L0 69V23L40 0Z"/></svg>
+
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Images -->
+        <div class="relative reveal">
+          <div class="relative aspect-[4/5] sm:aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl shadow-bark/20">
+            <img src="images/window-hive.jpg" alt="Спальное место с видом на пчелиные соты" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-bark/40 via-transparent to-transparent"></div>
+            <div class="absolute bottom-5 left-5 right-5">
+              <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cream/90 backdrop-blur-sm text-bark text-xs sm:text-sm font-medium">
+                <span class="w-2 h-2 rounded-full bg-honey animate-buzz"></span>
+                Вид на живые соты прямо из кровати
+              </span>
+            </div>
+          </div>
+
+          <div class="hidden sm:block absolute -bottom-10 -right-6 lg:-right-12 w-44 lg:w-56 aspect-square rounded-2xl overflow-hidden shadow-2xl shadow-bark/25 border-4 border-cream">
+            <img src="images/ceiling-bees.jpg" alt="Вид на пчёл через потолок-окно" class="w-full h-full object-cover" />
+          </div>
+
+          <div class="absolute -top-8 left-4 font-script text-3xl text-honey-dark rotate-[-4deg]">твоё окно в улей</div>
+        </div>
+
+        <!-- Text -->
+        <div class="reveal">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-honey-dark font-medium">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              Сон на пасеке
+            </span>
+            <span class="h-px flex-1 max-w-24 bg-gradient-to-r from-honey-dark/40 to-transparent"></span>
+          </div>
+
+          <div class="mt-4 font-script text-3xl sm:text-4xl text-honey-dark">целебная ночь</div>
+
+          <h2 class="mt-1 font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-bark leading-[1.05]">
+            Сон, который
+            <span class="text-honey-dark italic"> лечит</span>
+          </h2>
+
+          <p class="mt-6 text-lg text-bark/75 leading-relaxed">
+            Главное чудо Медовой дачи — ваши спальные места расположены прямо
+            над пчелиными ульями. Под деревянным полом живут пчёлы, а над
+            кроватью — панорамное окно с видом на живые соты. Их мерное гудение
+            проходит сквозь дерево и мягко обнимает вас на протяжении всего
+            сеанса.
+          </p>
+
+          <div class="mt-8 space-y-5">
+            <div class="flex gap-4 group">
+              <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-honey/15 flex items-center justify-center group-hover:bg-honey group-hover:scale-110 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark group-hover:text-white transition-colors"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-display text-lg font-bold text-bark mb-1">Глубокое расслабление</h3>
+                <p class="text-bark/70 leading-relaxed text-[15px]">Монотонное гудение пчёл синхронизирует ритм мозга, помогая достичь фазы глубокого сна и отдыха даже за короткий сеанс.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4 group">
+              <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-honey/15 flex items-center justify-center group-hover:bg-honey group-hover:scale-110 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark group-hover:text-white transition-colors"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+              </div>
+              <div>
+                <h3 class="font-display text-lg font-bold text-bark mb-1">Виброакустический массаж</h3>
+                <p class="text-bark/70 leading-relaxed text-[15px]">Низкочастотные вибрации (80–200 Гц) мягко проходят через тело, расслабляя мышцы и снимая спазмы в шее, плечах и пояснице.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4 group">
+              <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-honey/15 flex items-center justify-center group-hover:bg-honey group-hover:scale-110 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark group-hover:text-white transition-colors"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+              </div>
+              <div>
+                <h3 class="font-display text-lg font-bold text-bark mb-1">Дыхание пчелиного улья</h3>
+                <p class="text-bark/70 leading-relaxed text-[15px]">Воздух в домике насыщен фитонцидами воска и прополиса — природным антисептиком, который очищает дыхательные пути.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 p-6 rounded-2xl bg-white/60 border border-honey/15 backdrop-blur-sm">
+            <h4 class="font-display text-base font-bold text-bark mb-4 flex items-center gap-2">
+              <span class="w-1 h-4 rounded-full bg-honey"></span>
+              Что входит в спальное место
+            </h4>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5">
+              <li class="flex items-start gap-2 text-sm text-bark/80"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"/></svg><span>Деревянный домик ручной постройки из кедра и лиственницы</span></li>
+              <li class="flex items-start gap-2 text-sm text-bark/80"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"/></svg><span>Панорамное окно с видом прямо на соты пчелиной семьи</span></li>
+              <li class="flex items-start gap-2 text-sm text-bark/80"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"/></svg><span>Окно в потолке-крыше открывает вид на ульи сверху</span></li>
+              <li class="flex items-start gap-2 text-sm text-bark/80"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"/></svg><span>Ортопедический матрас из натурального латекса и кокоса</span></li>
+              <li class="flex items-start gap-2 text-sm text-bark/80"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"/></svg><span>Тёплое одеяло с наполнителем из овечьей шерсти</span></li>
+              <li class="flex items-start gap-2 text-sm text-bark/80"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"/></svg><span>Природная тишина — только гул пчёл и шум леса</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SERVICES ============== -->
+  <section id="services" class="relative py-20 sm:py-28 lg:py-32 bg-cream paper-texture">
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="flex items-center gap-3 reveal">
+          <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-honey-dark font-medium">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+            Что мы предлагаем
+          </span>
+          <span class="h-px flex-1 max-w-24 bg-gradient-to-r from-honey-dark/40 to-transparent"></span>
+        </div>
+
+        <div class="mt-4 font-script text-3xl sm:text-4xl text-honey-dark reveal">выберите свой ритуал</div>
+
+        <h2 class="mt-1 font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-bark leading-[1.05] reveal">
+          Четыре способа
+          <span class="text-honey-dark italic"> прикоснуться</span>
+        </h2>
+
+        <p class="mt-6 text-lg text-bark/75 leading-relaxed reveal">
+          От целительного сеанса над ульями до мастер-класса по литью свечей —
+          каждый формат создаёт особую близость с пчёлами и природой. Можно
+          сочетать: например, 2 часа на пасеке и полуденное чаепитие.
+        </p>
+      </div>
+
+      <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8" id="services-grid">
+        <!-- Service 1: Сон на пасеке -->
+        <article class="lift-card group relative overflow-hidden rounded-3xl bg-white border border-honey/15 hover:border-honey/40 hover:shadow-2xl hover:shadow-bark/10 reveal">
+          <div class="relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden">
+            <img src="images/window-forest.jpg" alt="Сон на пасеке" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-honey-dark to-honey opacity-25 group-hover:opacity-35 transition-opacity duration-500"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-bark/70 via-transparent to-transparent"></div>
+            <span class="absolute top-4 right-5 font-display text-6xl font-bold text-cream/30 select-none group-hover:text-cream/50 transition-colors">01</span>
+            <div class="absolute top-4 left-4 w-12 h-12 rounded-2xl bg-cream/95 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:rotate-6 transition-transform duration-500">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark"><path d="M2 4v16M22 4v16M2 8h20M2 14h20M6 4v16M18 4v16"/></svg>
+            </div>
+            <div class="absolute top-4 left-20">
+              <span class="px-3 py-1 rounded-full bg-cream/95 backdrop-blur-sm text-bark text-xs font-medium">Основной формат</span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-cream drop-shadow-lg">Сон на пасеке</h3>
+            </div>
+          </div>
+          <div class="p-6 sm:p-7">
+            <div class="flex flex-wrap gap-4 mb-4 text-sm text-bark/70">
+              <span class="inline-flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                от 1 часа
+              </span>
+              <span class="inline-flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                до 4 гостей
+              </span>
+            </div>
+            <p class="text-bark/75 leading-relaxed text-[15px]">Почасовая аренда домика над ульями с панорамным видом на соты. Гудение пчёл, свежий мёд к чаю и тишина леса — столько времени, сколько нужно именно вам.</p>
+            <div class="mt-6 flex items-center justify-between">
+              <a href="#contact" class="nav-link inline-flex items-center gap-1.5 text-honey-dark font-medium text-sm">Забронировать <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+              <a href="#contact" class="text-sm text-bark/60 hover:text-honey-dark hover:bg-honey/10 px-3 py-1.5 rounded-md transition-colors">Подробнее</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Service 2: Чаепития -->
+        <article class="lift-card group relative overflow-hidden rounded-3xl bg-white border border-honey/15 hover:border-honey/40 hover:shadow-2xl hover:shadow-bark/10 reveal">
+          <div class="relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden">
+            <img src="images/tea-table.jpg" alt="Индивидуальные чаепития" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest to-honey-dark opacity-25 group-hover:opacity-35 transition-opacity duration-500"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-bark/70 via-transparent to-transparent"></div>
+            <span class="absolute top-4 right-5 font-display text-6xl font-bold text-cream/30 select-none group-hover:text-cream/50 transition-colors">02</span>
+            <div class="absolute top-4 left-4 w-12 h-12 rounded-2xl bg-cream/95 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:rotate-6 transition-transform duration-500">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <div class="absolute top-4 left-20">
+              <span class="px-3 py-1 rounded-full bg-cream/95 backdrop-blur-sm text-bark text-xs font-medium">Ритуал</span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-cream drop-shadow-lg">Индивидуальные чаепития</h3>
+            </div>
+          </div>
+          <div class="p-6 sm:p-7">
+            <div class="flex flex-wrap gap-4 mb-4 text-sm text-bark/70">
+              <span class="inline-flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                1.5–2 часа
+              </span>
+              <span class="inline-flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                1–6 человек
+              </span>
+            </div>
+            <p class="text-bark/75 leading-relaxed text-[15px]">Травяной чай из самовара на дровах с мёдом прямо из сот, свежими сотами и пасечными сладостями. Подаётся на веранде с видом на лес.</p>
+            <div class="mt-6 flex items-center justify-between">
+              <a href="#contact" class="nav-link inline-flex items-center gap-1.5 text-honey-dark font-medium text-sm">Забронировать <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+              <a href="#contact" class="text-sm text-bark/60 hover:text-honey-dark hover:bg-honey/10 px-3 py-1.5 rounded-md transition-colors">Подробнее</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Service 3: Свечи -->
+        <article class="lift-card group relative overflow-hidden rounded-3xl bg-white border border-honey/15 hover:border-honey/40 hover:shadow-2xl hover:shadow-bark/10 reveal">
+          <div class="relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden">
+            <img src="images/ceiling-bees.jpg" alt="Свечи из пчелиного воска" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-honey to-honey-light opacity-25 group-hover:opacity-35 transition-opacity duration-500"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-bark/70 via-transparent to-transparent"></div>
+            <span class="absolute top-4 right-5 font-display text-6xl font-bold text-cream/30 select-none group-hover:text-cream/50 transition-colors">03</span>
+            <div class="absolute top-4 left-4 w-12 h-12 rounded-2xl bg-cream/95 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:rotate-6 transition-transform duration-500">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+            </div>
+            <div class="absolute top-4 left-20">
+              <span class="px-3 py-1 rounded-full bg-cream/95 backdrop-blur-sm text-bark text-xs font-medium">Мастер-класс</span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-cream drop-shadow-lg">Свечи из пчелиного воска</h3>
+            </div>
+          </div>
+          <div class="p-6 sm:p-7">
+            <div class="flex flex-wrap gap-4 mb-4 text-sm text-bark/70">
+              <span class="inline-flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                2 часа
+              </span>
+              <span class="inline-flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                1–8 человек
+              </span>
+            </div>
+            <p class="text-bark/75 leading-relaxed text-[15px]">Льёте собственные свечи из чистого воска нашей пасеки. Узнаёте о свойствах воска, подбираете аромат и форму, забираете свечу с собой.</p>
+            <div class="mt-6 flex items-center justify-between">
+              <a href="#contact" class="nav-link inline-flex items-center gap-1.5 text-honey-dark font-medium text-sm">Забронировать <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+              <a href="#contact" class="text-sm text-bark/60 hover:text-honey-dark hover:bg-honey/10 px-3 py-1.5 rounded-md transition-colors">Подробнее</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Service 4: Экскурсии -->
+        <article class="lift-card group relative overflow-hidden rounded-3xl bg-white border border-honey/15 hover:border-honey/40 hover:shadow-2xl hover:shadow-bark/10 reveal">
+          <div class="relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden">
+            <img src="images/cabin-outside.jpg" alt="Прогулка по пасеке" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-bark to-forest opacity-25 group-hover:opacity-35 transition-opacity duration-500"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-bark/70 via-transparent to-transparent"></div>
+            <span class="absolute top-4 right-5 font-display text-6xl font-bold text-cream/30 select-none group-hover:text-cream/50 transition-colors">04</span>
+            <div class="absolute top-4 left-4 w-12 h-12 rounded-2xl bg-cream/95 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:rotate-6 transition-transform duration-500">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark"><path d="M17 14V6a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v8m12 0H5m12 0v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-6"/></svg>
+            </div>
+            <div class="absolute top-4 left-20">
+              <span class="px-3 py-1 rounded-full bg-cream/95 backdrop-blur-sm text-bark text-xs font-medium">Экскурсия</span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-cream drop-shadow-lg">Прогулка по пасеке</h3>
+            </div>
+          </div>
+          <div class="p-6 sm:p-7">
+            <div class="flex flex-wrap gap-4 mb-4 text-sm text-bark/70">
+              <span class="inline-flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                1.5 часа
+              </span>
+              <span class="inline-flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                1–10 человек
+              </span>
+            </div>
+            <p class="text-bark/75 leading-relaxed text-[15px]">Знакомство с жизнью пчелиной семьи, рассказ пчеловода, дегустация мёда разных сезонов и посещение точки, где домик встречается с ульями.</p>
+            <div class="mt-6 flex items-center justify-between">
+              <a href="#contact" class="nav-link inline-flex items-center gap-1.5 text-honey-dark font-medium text-sm">Забронировать <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+              <a href="#contact" class="text-sm text-bark/60 hover:text-honey-dark hover:bg-honey/10 px-3 py-1.5 rounded-md transition-colors">Подробнее</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== GALLERY ============== -->
+  <section id="gallery" class="relative py-20 sm:py-28 lg:py-32 bg-bark">
+    <div class="absolute inset-0 opacity-[0.06] pointer-events-none" style="background-image: radial-gradient(circle at 50% 50%, oklch(0.85 0.12 85) 1.5px, transparent 1.5px); background-size: 32px 32px;"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-honey-light font-medium reveal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          Галерея
+        </span>
+
+        <h2 class="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-cream leading-[1.05] reveal">
+          Загляните
+          <span class="text-honey-light italic"> внутрь</span>
+        </h2>
+
+        <p class="mt-6 text-lg text-cream/75 leading-relaxed reveal">
+          Несколько кадров из жизни Медовой дачи: домик снаружи, спальные
+          места с видом на соты, чаепитие на веранде и виды из окон.
+        </p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 auto-rows-[180px] sm:auto-rows-[220px] lg:auto-rows-[260px] gap-4" id="gallery-grid">
+        <!-- Photos will be populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CONTACT ============== -->
+  <section id="contact" class="relative py-20 sm:py-28 lg:py-32 bg-gradient-to-b from-cream via-beeswax/30 to-cream overflow-hidden">
+    <div class="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-honey/10 blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-forest/10 blur-3xl pointer-events-none"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-14 items-start">
+        <!-- Left -->
+        <div class="lg:col-span-2 reveal">
+          <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-honey-dark font-medium">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Бронирование
+          </span>
+
+          <h2 class="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-bark leading-[1.05]">
+            Приезжайте
+            <span class="text-honey-dark italic"> отдохнуть</span>
+          </h2>
+
+          <p class="mt-6 text-lg text-bark/75 leading-relaxed">
+            Оставьте заявку — расскажем о свободных слотах, подберём программу
+            под вас и поможем с дорогой. Аренда домика почасовая — от 1 часа,
+            можно забронировать на удобное вам время.
+          </p>
+
+          <div class="mt-8 space-y-4">
+            <a href="tel:+79000000000" class="block hover:scale-[1.01] transition-transform">
+              <div class="flex items-start gap-3.5 p-4 rounded-2xl bg-white/60 border border-honey/15 hover:border-honey/40 transition-colors">
+                <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-honey/15 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <div class="text-xs uppercase tracking-wide text-bark/55">Телефон</div>
+                  <div class="text-bark font-medium mt-0.5">+7 (900) 000-00-00</div>
+                </div>
+              </div>
+            </a>
+
+            <a href="mailto:hello@medovayadacha.ru" class="block hover:scale-[1.01] transition-transform">
+              <div class="flex items-start gap-3.5 p-4 rounded-2xl bg-white/60 border border-honey/15 hover:border-honey/40 transition-colors">
+                <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-honey/15 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <div class="text-xs uppercase tracking-wide text-bark/55">Email</div>
+                  <div class="text-bark font-medium mt-0.5">hello@medovayadacha.ru</div>
+                </div>
+              </div>
+            </a>
+
+            <a href="#map" class="block hover:scale-[1.01] transition-transform">
+              <div class="flex items-start gap-3.5 p-4 rounded-2xl bg-white/60 border border-honey/15 hover:border-honey/40 transition-colors">
+                <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-honey/15 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <div class="text-xs uppercase tracking-wide text-bark/55">Адрес</div>
+                  <div class="text-bark font-medium mt-0.5">Россия, Ленинградская обл., урочище Медовый Бор</div>
+                </div>
+              </div>
+            </a>
+
+            <div>
+              <div class="flex items-start gap-3.5 p-4 rounded-2xl bg-white/60 border border-honey/15">
+                <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-honey/15 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <div class="text-xs uppercase tracking-wide text-bark/55">Режим</div>
+                  <div class="text-bark font-medium mt-0.5">Почасовая аренда, ежедневно по предварительной записи</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Socials -->
+          <div class="mt-6 flex gap-3">
+            <a href="#" aria-label="WhatsApp" class="w-11 h-11 rounded-full bg-white/60 border border-honey/15 hover:bg-honey hover:border-honey hover:text-white text-honey-dark flex items-center justify-center transition-all duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </a>
+            <a href="#" aria-label="Telegram" class="w-11 h-11 rounded-full bg-white/60 border border-honey/15 hover:bg-honey hover:border-honey hover:text-white text-honey-dark flex items-center justify-center transition-all duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="w-11 h-11 rounded-full bg-white/60 border border-honey/15 hover:bg-honey hover:border-honey hover:text-white text-honey-dark flex items-center justify-center transition-all duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="lg:col-span-3 reveal">
+          <form id="booking-form" class="relative p-6 sm:p-8 lg:p-10 rounded-3xl bg-white shadow-xl shadow-bark/10 border border-honey/15">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div class="space-y-2">
+                <label for="name" class="block text-sm font-medium text-bark/80">Имя</label>
+                <input type="text" id="name" name="name" required placeholder="Как к вам обращаться" class="w-full bg-cream/50 border border-honey/20 focus:border-honey rounded-xl h-11 px-3 text-bark placeholder:text-bark/40 outline-none transition-colors" />
+              </div>
+
+              <div class="space-y-2">
+                <label for="phone" class="block text-sm font-medium text-bark/80">Телефон</label>
+                <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__" class="w-full bg-cream/50 border border-honey/20 focus:border-honey rounded-xl h-11 px-3 text-bark placeholder:text-bark/40 outline-none transition-colors" />
+              </div>
+
+              <div class="space-y-2 sm:col-span-2">
+                <label for="email" class="block text-sm font-medium text-bark/80">Email (необязательно)</label>
+                <input type="email" id="email" name="email" placeholder="вы@example.ru" class="w-full bg-cream/50 border border-honey/20 focus:border-honey rounded-xl h-11 px-3 text-bark placeholder:text-bark/40 outline-none transition-colors" />
+              </div>
+
+              <div class="space-y-2 sm:col-span-2">
+                <label for="service" class="block text-sm font-medium text-bark/80">Что вас интересует</label>
+                <select id="service" name="service" required class="w-full bg-cream/50 border border-honey/20 focus:border-honey rounded-xl h-11 px-3 text-bark outline-none transition-colors">
+                  <option value="">Выберите формат</option>
+                  <option value="sleep">Сон на пасеке (почасово)</option>
+                  <option value="tea">Индивидуальное чаепитие</option>
+                  <option value="candle">Мастер-класс по свечам</option>
+                  <option value="tour">Экскурсия по пасеке</option>
+                  <option value="combo">Комплексная программа</option>
+                </select>
+              </div>
+
+              <div class="space-y-2 sm:col-span-2">
+                <label for="duration" class="block text-sm font-medium text-bark/80">Длительность сеанса</label>
+                <select id="duration" name="duration" required class="w-full bg-cream/50 border border-honey/20 focus:border-honey rounded-xl h-11 px-3 text-bark outline-none transition-colors">
+                  <option value="">Выберите длительность</option>
+                  <option value="1h">1 час — пробный сеанс</option>
+                  <option value="2h">2 часа — стандарт</option>
+                  <option value="3h">3 часа — углублённый</option>
+                  <option value="4h">4 часа — полный день</option>
+                  <option value="custom">Другая / своя программа</option>
+                </select>
+              </div>
+
+              <div class="space-y-2 sm:col-span-2">
+                <label for="message" class="block text-sm font-medium text-bark/80">Комментарий</label>
+                <textarea id="message" name="message" rows="4" placeholder="Желаемые даты, количество гостей, особые пожелания…" class="w-full bg-cream/50 border border-honey/20 focus:border-honey rounded-xl p-3 text-bark placeholder:text-bark/40 outline-none resize-none transition-colors"></textarea>
+              </div>
+            </div>
+
+            <div class="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <p class="text-xs text-bark/55 max-w-xs">Нажимая «Отправить», вы соглашаетесь на обработку персональных данных. Мы не передаём их третьим лицам.</p>
+              <button type="submit" id="submit-btn" class="inline-flex items-center justify-center bg-honey hover:bg-honey-dark text-white rounded-full px-7 h-12 shadow-lg shadow-honey/30 disabled:opacity-60 transition-colors">
+                <span id="submit-text">Отправить заявку</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="bg-bark text-cream pt-16 pb-8">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-8 sm:gap-10">
+        <div class="col-span-2">
+          <a href="#top" class="inline-flex items-center gap-3">
+            <img src="images/logo.png" alt="Логотип «Медовая дача»" class="w-12 h-12 object-contain" />
+            <span class="flex flex-col items-center leading-none">
+              <span class="font-script text-3xl sm:text-4xl text-cream">Медовая дача</span>
+              <span class="font-display italic text-[11px] tracking-[0.15em] mt-1 text-cream/75">в Экопарке Поляны</span>
+            </span>
+          </a>
+          <p class="mt-5 text-cream/65 text-sm leading-relaxed max-w-sm">
+            Эко-домик на пасеке, где сон над ульями пчёл, индивидуальные
+            чаепития, мастер-классы по свечам из воска и экскурсии по пасеке
+            возвращают телу и душе гармонию.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-display text-base font-bold text-honey-light mb-4">Навигация</h4>
+          <ul class="space-y-2.5">
+            <li><a href="#concept" class="text-sm text-cream/70 hover:text-honey-light transition-colors">Концепция</a></li>
+            <li><a href="#sleeping" class="text-sm text-cream/70 hover:text-honey-light transition-colors">Сон на пасеке</a></li>
+            <li><a href="#services" class="text-sm text-cream/70 hover:text-honey-light transition-colors">Услуги</a></li>
+            <li><a href="#gallery" class="text-sm text-cream/70 hover:text-honey-light transition-colors">Галерея</a></li>
+            <li><a href="#contact" class="text-sm text-cream/70 hover:text-honey-light transition-colors">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display text-base font-bold text-honey-light mb-4">Услуги</h4>
+          <ul class="space-y-2.5">
+            <li><a href="#contact" class="text-sm text-cream/70 hover:text-honey-light transition-colors">Сон на пасеке</a></li>
+            <li><a href="#contact" class="text-sm text-cream/70 hover:text-honey-light transition-colors">Чаепития</a></li>
+            <li><a href="#contact" class="text-sm text-cream/70 hover:text-honey-light transition-colors">Свечи из воска</a></li>
+            <li><a href="#contact" class="text-sm text-cream/70 hover:text-honey-light transition-colors">Экскурсии</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display text-base font-bold text-honey-light mb-4">Связь</h4>
+          <ul class="space-y-2.5">
+            <li><a href="tel:+79000000000" class="text-sm text-cream/70 hover:text-honey-light transition-colors">+7 (900) 000-00-00</a></li>
+            <li><a href="mailto:hello@medovayadacha.ru" class="text-sm text-cream/70 hover:text-honey-light transition-colors">hello@medovayadacha.ru</a></li>
+            <li><a href="#" class="text-sm text-cream/70 hover:text-honey-light transition-colors">WhatsApp</a></li>
+            <li><a href="#" class="text-sm text-cream/70 hover:text-honey-light transition-colors">Telegram</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-6 border-t border-cream/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <p class="text-xs text-cream/50">© <span id="year">2026</span> Медовая дача · в Экопарке Поляны. Все права защищены.</p>
+        <p class="text-xs text-cream/50 flex items-center gap-1.5">
+          Сделано с
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-honey"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          и любовью к пчёлам
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============== TOAST ============== -->
+  <div id="toast" class="fixed bottom-6 right-6 z-[100] max-w-sm pointer-events-none opacity-0 translate-y-2 transition-all duration-300">
+    <div class="bg-white border border-honey/30 rounded-2xl shadow-2xl shadow-bark/20 p-4 pointer-events-auto">
+      <div class="flex items-start gap-3">
+        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-honey/15 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-honey-dark"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div id="toast-title" class="font-display font-bold text-bark">Заявка отправлена!</div>
+          <div id="toast-desc" class="text-sm text-bark/70 mt-0.5">Мы свяжемся с вами в течение дня, чтобы уточнить время сеанса.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============== LIGHTBOX ============== -->
+  <div id="lightbox" class="fixed inset-0 z-[200] hidden items-center justify-center bg-bark/90 backdrop-blur-sm p-4 sm:p-8">
+    <button id="lightbox-close" class="absolute top-5 right-5 w-11 h-11 rounded-full bg-cream/10 hover:bg-cream/20 text-cream flex items-center justify-center transition-colors" aria-label="Закрыть">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="relative max-w-5xl w-full">
+      <img id="lightbox-img" src="" alt="" class="w-full max-h-[80vh] object-contain bg-bark rounded-2xl" />
+      <div class="mt-4">
+        <p id="lightbox-caption" class="font-display text-lg text-cream"></p>
+        <p id="lightbox-alt" class="text-cream/70 text-sm mt-1"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

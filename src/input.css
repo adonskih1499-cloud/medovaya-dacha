@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* Явно указываем HTML-файлы для сканирования классов */
+@source "../index.html";
+
+@theme {
+  --color-honey: oklch(0.7 0.16 70);
+  --color-honey-dark: oklch(0.55 0.14 60);
+  --color-honey-light: oklch(0.85 0.12 85);
+  --color-honeycomb: oklch(0.78 0.14 75);
+  --color-beeswax: oklch(0.92 0.05 85);
+  --color-forest: oklch(0.5 0.08 135);
+  --color-bark: oklch(0.32 0.04 50);
+  --color-cream: oklch(0.985 0.012 85);
+
+  --font-sans: 'Geist', system-ui, sans-serif;
+  --font-display: 'PT Serif', Georgia, serif;
+  --font-script: 'Marck Script', 'PT Serif', Georgia, serif;
+}

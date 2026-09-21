@@ -1,0 +1,304 @@
+/* ============================================
+   Медовая дача — кастомные стили
+   ============================================ */
+
+:root {
+  --honey: oklch(0.7 0.16 70);
+  --honey-dark: oklch(0.55 0.14 60);
+  --honey-light: oklch(0.85 0.12 85);
+  --honeycomb: oklch(0.78 0.14 75);
+  --beeswax: oklch(0.92 0.05 85);
+  --forest: oklch(0.5 0.08 135);
+  --bark: oklch(0.32 0.04 50);
+  --cream: oklch(0.985 0.012 85);
+}
+
+* {
+  border-color: oklch(0.88 0.04 75);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: 'Geist', system-ui, sans-serif;
+  background: var(--cream);
+  color: var(--bark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'PT Serif', Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+.font-script {
+  font-family: 'Marck Script', 'PT Serif', Georgia, serif;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+
+.font-display {
+  font-family: 'PT Serif', Georgia, serif;
+}
+
+/* ===== Paper texture ===== */
+.paper-texture {
+  position: relative;
+}
+.paper-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.4 0 0 0 0 0.3 0 0 0 0 0.15 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+/* ===== Custom scrollbar ===== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--honey);
+  border-radius: 6px;
+  border: 2px solid var(--cream);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--honey-dark);
+}
+
+/* ===== Animations ===== */
+@keyframes buzz-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.04); opacity: 1; }
+}
+.animate-buzz {
+  animation: buzz-pulse 3s ease-in-out infinite;
+}
+
+@keyframes drop-fall {
+  0% { transform: translateY(-12px); opacity: 0; }
+  30% { opacity: 0.7; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+.animate-drop {
+  animation: drop-fall 8s linear infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+.animate-bounce {
+  animation: bounce 1.6s ease-in-out infinite;
+}
+
+/* ===== Navbar scrolled state ===== */
+#navbar.scrolled {
+  background: rgba(255, 252, 245, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(112, 89, 36, 0.15);
+  box-shadow: 0 8px 30px rgba(120, 80, 30, 0.1);
+}
+
+#navbar.scrolled #brand-title {
+  color: var(--bark);
+}
+
+#navbar.scrolled #brand-tagline {
+  color: rgba(50, 40, 20, 0.65);
+}
+
+#navbar.scrolled .nav-link {
+  color: rgba(50, 40, 20, 0.8);
+}
+
+#navbar.scrolled .nav-link:hover {
+  color: var(--honey-dark);
+}
+
+#navbar.scrolled #menu-btn {
+  color: var(--bark);
+}
+
+#navbar.scrolled #menu-btn:hover {
+  background: rgba(112, 89, 36, 0.1);
+}
+
+/* Navbar top state (transparent over hero) */
+#navbar:not(.scrolled) {
+  background: linear-gradient(to bottom, rgba(50, 30, 10, 0.4), transparent);
+}
+
+#navbar:not(.scrolled) #brand-title {
+  color: var(--cream);
+}
+
+#navbar:not(.scrolled) #brand-tagline {
+  color: rgba(255, 250, 240, 0.75);
+}
+
+#navbar:not(.scrolled) .nav-link {
+  color: rgba(255, 250, 240, 0.85);
+}
+
+#navbar:not(.scrolled) .nav-link:hover {
+  color: var(--honey-light);
+}
+
+#navbar:not(.scrolled) #menu-btn {
+  color: var(--cream);
+}
+
+#navbar:not(.scrolled) #menu-btn:hover {
+  background: rgba(255, 250, 240, 0.1);
+}
+
+/* ===== Nav link underline ===== */
+.nav-link {
+  position: relative;
+  border-radius: 9999px;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  width: 0;
+  height: 1.5px;
+  background: linear-gradient(90deg, var(--honey-dark), var(--honey));
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 70%;
+  left: 15%;
+}
+
+/* ===== Lift card on hover ===== */
+.lift-card {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.5s ease,
+              border-color 0.5s ease;
+}
+.lift-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ===== Reveal animation (IntersectionObserver) ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Mobile menu visibility ===== */
+#mobile-menu.open {
+  max-height: 500px;
+}
+
+/* ===== Select styling ===== */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23553416' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+}
+
+/* ===== Toast ===== */
+#toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Lightbox ===== */
+#lightbox.open {
+  display: flex;
+}
+
+/* ===== Gallery items (created by JS) ===== */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: rgba(50, 30, 10, 0.4);
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+.gallery-item .gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(50, 30, 10, 0.8), transparent);
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+.gallery-item:hover .gallery-overlay {
+  opacity: 0.9;
+}
+.gallery-item .gallery-caption {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  font-family: 'PT Serif', Georgia, serif;
+  color: var(--cream);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Responsive gallery spans */
+.gallery-item.span-2x2 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.gallery-item.span-2 {
+  grid-column: span 2;
+}
+@media (min-width: 768px) {
+  .gallery-item.span-2x2 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .gallery-item.span-2 {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+
+/* ===== Disable text selection on UI decorative elements ===== */
+button, .nav-link {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ===== Improve touch targets on mobile ===== */
+@media (max-width: 768px) {
+  button, a {
+    min-height: 44px;
+  }
+}
